@@ -1,0 +1,41 @@
+{
+  "format": "wall-review-v1",
+  "wall": "Line 2",
+  "number": 30,
+  "ancestor": {
+    "sha256": "2f14a317ee9d54201c9119c2bad12ba195f16e48de2cc619925f25fc6ec35f45",
+    "source": "record 29 content-addressed wall"
+  },
+  "png": {
+    "path": "artifacts/line-2/wall-v11.png",
+    "sha256": "c91d841d2cd22c5e40ea77e2ae4d72a1896329da2acac69b93df3a42f683552a",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "color": "RGB",
+    "opaque": true,
+    "changed_pixel_count": 33525,
+    "changed_bbox": [995, 842, 1225, 1028]
+  },
+  "jpeg": {
+    "path": "dist/line-2/30.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 74265
+  },
+  "visual_review": {
+    "preserves_cave_size_rock_framing": true,
+    "pepe_frog_visible": true,
+    "wide_mouth_and_heavy_lidded_eyes_visible": true,
+    "existing_five_digit_hands_preserved": true,
+    "new_mark": "small sealed reed bundle inside a charcoal boundary with three red-ochre witness stones",
+    "new_mark_location": "vacant lower-right rock",
+    "text_or_numbers_on_wall": false,
+    "unmet_visual_requirements": []
+  },
+  "limitations": [
+    "Visual review is manual and cannot certify every artistic property.",
+    "The content-addressed ancestor was recovered from the public artifact endpoint before editing."
+  ]
+}

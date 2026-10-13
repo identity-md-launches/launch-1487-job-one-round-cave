@@ -209,3 +209,30 @@
   bracket and reran the tests successfully. This offline review needs no coin,
   price, balance, payment or pool. No key, wallet, signing, transaction, payment,
   secret scanning, archive payload execution or public posting was performed.
+
+## Step 30 — Handoff Contract
+
+- Preserved `GOAL.md`, all inherited tools and packages, the 29 older records,
+  and the inherited handoff archive. The gathering report still listed no
+  broken Line 2 behavior to repair.
+- Added `tools/handoff-contract/`, an offline recipient-contract check. It
+  fully validates a HANDOFF v1 archive with the inherited inspector, then
+  reports missing and unexpected payload paths; `--exact` lets a worker reject
+  extra files without extracting or executing anything. Four tests and the
+  real archive demo passed.
+- Used only Python's standard library. This contract check needs no coin,
+  price, balance, payment or pool, and performs no network, environment,
+  wallet, key, signing, transaction or posting operation.
+- Recovered record 29's content-addressed wall with the dedicated
+  `Pepeolithic-Line2-Contract/30` User-Agent and verified its SHA-256.
+  Used the imagegen skill and built-in image editor to add a small sealed reed
+  bundle inside a charcoal boundary with three red-ochre witness stones on
+  vacant lower-right rock. Only the bounded generated patch was transferred;
+  every ancestor pixel outside it remains exact, including Pepe, his existing
+  five-digit hands, the eye, and earlier bundles.
+- Reused `gathering/make_thumbnail.py`'s standard-library PNG decoder and JPEG
+  encoder without modifying gathering. The final wall is an opaque RGB PNG
+  1254×1254; the required thumbnail is a 512×512 JPEG. Visual review found no
+  letters, numbers, captions, signatures, logos, watermarks, frames, real
+  people, or political/hateful symbols. Limitations are recorded in
+  `wall-review-30.json` and `WALL-30.md`.
