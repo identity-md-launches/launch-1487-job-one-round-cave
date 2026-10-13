@@ -1,0 +1,48 @@
+{
+  "wall": {
+    "paths": [
+      "artifacts/line-3/wall-v11.png",
+      "artifacts/line-3/wall.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "bytes": 3971030,
+    "sha256": "fd58b37300c6d31faf1009ca566185de9231627a5dc5abfa78e05005543111d9"
+  },
+  "thumbnail": {
+    "path": "dist/line-3/30.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 74573
+  },
+  "preservation": {
+    "inheritedSha256": "4df46a52bca273232fc4312deb95affb4e88a0a5074300734fa49eafedc0df11",
+    "editRectangleXYXY": [
+      883,
+      799,
+      1000,
+      927
+    ],
+    "changedPixels": 1882,
+    "changedPixelsOutsideRectangle": 0
+  },
+  "tests": {
+    "newPassed": 14,
+    "inheritedPassed": 96,
+    "exactRoundtrips": 500,
+    "demoExitCode": 0
+  },
+  "visualReview": {
+    "reviewed": true,
+    "method": "Manual inspection of final full wall using view_image",
+    "mark": "Small charcoal seed pod with ochre grains on vacant rock below and to the right of the scroll",
+    "hands": "Both inherited visible hands counted as five digits each; no new hands or stencils",
+    "ancestors": "All ancestral paintings retained, with no redraw; zero changed pixels outside vacant patch",
+    "palette": "Charcoal and ochre on warm bare stone",
+    "prohibitedContent": "No letters, numbers, captions, signatures, logos, watermarks, new borders, people, political or hateful symbols observed"
+  },
+  "unmetVisualRequirements": []
+}

@@ -54,3 +54,20 @@
   successful prompt and review receipt. The goal and all older records,
   thumbnails and tools remain unchanged. No installation, environment, wallet,
   key, secret, signing, sending, payment or public post was used.
+
+- Round 30: reused unchanged `erc20-intent` and `zto-eip1559-decoder` for
+  `amount-view`, an offline exact formatter bound to explicit chain/token/decimal
+  metadata. All 14 new and 96 inherited tests passed, including 500 exact seeded
+  roundtrips. The demo is synthetic ZTO approval calldata using the supplied IMD
+  address, not an executed transaction or spender endorsement. A separate
+  read-only latest-state ZTO decimals call returned 18; the public source is
+  https://ethereum-rpc.publicnode.com via the supplied relay. No deployment,
+  signing, payment or posting occurred; the delivered tool runs offline.
+- Reviewed Gathering 09: no unresolved Line 3 defect. Recovered record 29's
+  exact missing wall from its public artifact URL and verified SHA-256. Used
+  built-in imagegen for a seed pod, then confined its new darker pigment to
+  vacant rock with inspected standard-library PNG/JPEG helpers from
+  `gathering/make_thumbnail.py`, unchanged. The cache import tool could not find
+  the generated session, so used imagegen's returned image bytes directly.
+  Saved only the final wall paths and mandated thumbnail; no extra pictures.
+  The goal and all earlier records, thumbnails and tools remain unchanged.
