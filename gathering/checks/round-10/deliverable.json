@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "line_checks": 32,
+  "shared_suites": 9,
+  "goal_count": 4,
+  "gallery_records": 141,
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "8-bit RGB PNG",
+  "png_bytes": 3810904,
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "baseline JPEG",
+  "jpeg_bytes": 69139,
+  "wall_sha256": "3f864c35cf733966310d1c185edcb41d2bec72741756c0429c363824522764b1",
+  "source_sha256": "db57e0e96e1e27dec41307a317f51bd501022d3373fc61b0ce258ae32313132f",
+  "changed_pixels": 9965,
+  "changed_pixels_outside_rectangle": 0,
+  "unmet_visual_requirements": []
+}

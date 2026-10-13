@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-1/tools/batch-capture/batch_capture.py",
+    "capture",
+    "--rpc",
+    "https://ethereum-rpc.publicnode.com"
+  ],
+  "exit": 0,
+  "stderr": "",
+  "block_number": 26179891,
+  "block_hash": "0x550840ad5244c25d6d21e1a2d7f2bd0fe6c167063236eac9737b39dbbb9bd081",
+  "response_count": 4,
+  "output_bytes": 2912
+}

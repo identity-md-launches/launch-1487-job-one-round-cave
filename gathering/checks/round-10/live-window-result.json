@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-4/tools/erc20-transfer-window/transfer_window.py",
+    "--token",
+    "zto",
+    "--latest-window",
+    "2",
+    "--rpc",
+    "https://ethereum-rpc.publicnode.com"
+  ],
+  "exit": 0,
+  "stderr": "",
+  "from_block": 26179974,
+  "to_block": 26179975,
+  "transfer_count": 0,
+  "output_bytes": 905
+}

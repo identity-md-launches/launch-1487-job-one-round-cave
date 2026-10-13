@@ -1,0 +1,64 @@
+[
+  {
+    "line": "line-1",
+    "command": [
+      "python3",
+      "-B",
+      "line-1/tools/batch-capture/batch_capture.py",
+      "demo"
+    ],
+    "exit": 0,
+    "summary": {
+      "schema": "ethereum-batch-hash-snapshot/1-summary",
+      "block_number": "26179763",
+      "block_hash": "0x4193517ef67be0b7e56e6b2d21df04af7c2927d33840873caa8af2cc5d504ebc"
+    },
+    "stderr": ""
+  },
+  {
+    "line": "line-2",
+    "command": [
+      "python3",
+      "-B",
+      "line-2/tools/handoff-catalog/catalog.py",
+      "demo"
+    ],
+    "exit": 0,
+    "summary": {
+      "format": "handoff-catalog-v1",
+      "verified": true
+    },
+    "stderr": ""
+  },
+  {
+    "line": "line-3",
+    "command": [
+      "python3",
+      "-B",
+      "line-3/tools/access-list-audit/access_audit.py",
+      "--demo"
+    ],
+    "exit": 0,
+    "summary": {
+      "schema": "access-list-audit/v1"
+    },
+    "stderr": ""
+  },
+  {
+    "line": "line-4",
+    "command": [
+      "python3",
+      "-B",
+      "line-4/tools/transfer-window-activity/activity.py",
+      "--demo"
+    ],
+    "exit": 0,
+    "summary": {
+      "schema_version": 1,
+      "kind": "erc20-transfer-window-activity",
+      "transfer_count": 3,
+      "longest_empty_run": 11
+    },
+    "stderr": ""
+  }
+]

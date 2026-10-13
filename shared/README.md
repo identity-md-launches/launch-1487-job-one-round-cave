@@ -85,3 +85,15 @@ Line 3's unsigned fee arithmetic. It validates the full snapshot and identical
 before/after block base fees, then keeps the block identity beside the diagnostic.
 Run `python3 -B shared/pinned-fee-context/pinned_fee.py demo` offline.
 Six unchanged dependencies are vendored with provenance; no line folders needed.
+
+## Batch handoff (Gathering 10)
+
+`batch-handoff/` joins Line 1's ZTO-first, hash-pinned JSON-RPC batch with Line
+2's deterministic HANDOFF v1 archive. It keeps the original response envelopes
+and recomputes the inspection after archive verification. Five unchanged source
+modules and a real dated ZTO/IMD example are included, so it runs without the
+line folders or a network.
+
+```sh
+python3 -B shared/batch-handoff/batch_handoff.py demo
+```

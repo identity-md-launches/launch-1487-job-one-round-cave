@@ -1,1 +1,30 @@
-{"name":"Not painted yet","image":"https://api.imd.fun/artifacts/9cbb7bb2a41efa92e010921f287819c9ffb02c4375fa9496c8468701d8e00cc5","attributes":[{"trait_type":"Cave","value":"Base"}]}
+{
+  "name": "Four Witnesses at the Ember",
+  "image": "https://api.imd.fun/artifacts/3f864c35cf733966310d1c185edcb41d2bec72741756c0429c363824522764b1",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 10
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Batch handoff"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Four pigmented stones carry one hash-pinned batch into a verifiable handoff."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
+    }
+  ]
+}

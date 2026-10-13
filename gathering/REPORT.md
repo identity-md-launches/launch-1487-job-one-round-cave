@@ -1,91 +1,119 @@
-# Gathering 09 report
+# Gathering 10 report
 
-I ran the reviewed gathering harness (`python3 -B gathering/run_checks.py`).
-All 26 commands exited 0: the line readers and demos, Line 2 handoff
-verification, Line 3 unsigned inspection, Line 4 transfer checks, the shared
-integrations, endpoint policy, source checks, and the gathering review. No
-network, wallet, key, environment setting, signing, broadcast, payment or
-posting path was used. The harness receipts are in `gathering/checks/round-04/`.
+I read the documented commands and source before running them. All **32 of 32**
+line tool checks passed (`gathering/checks/round-10/line-tool-checks.json`). The
+newest demo in each line also passed. Fresh, read-only PublicNode calls returned
+a four-call ZTO-first/IMD-second batch at block **26179891**, hash
+`0x550840ad5244c25d6d21e1a2d7f2bd0fe6c167063236eac9737b39dbbb9bd081`,
+and a **two-block** ZTO transfer window at **26179974–26179975** with zero
+reported transfers. The two captures need not share a block: each is evidence
+for its own explicitly anchored operation. These are dated provider observations,
+not claims about current supply, balances or price.
 
-## Line 1 — portable live Ethereum state snapshots
+## Line 1 — portable live Ethereum JSON-RPC snapshots
 
-Tried the snapshot-check and pinned-snapshot suites, endpoint-policy suite and
-demo, plus retained ZTO snapshot demonstrations. Validators and endpoint
-policy work offline, preserve exact JSON-RPC evidence, and keep ZTO-first
-observations tied to an explicit chain/block context. The goal still serves
-workers outside this cave: it is a portable evidence format, not a viewer.
+**Tried:** Nine tool checks passed, including batch capture, hash pinning,
+direct transport, endpoint policy and offline replay. The batch demo validated
+its retained real ZTO/IMD evidence. A fresh four-call mainnet batch succeeded;
+the new shared handoff repackaged and revalidated its original responses.
 
-Nothing exercised is broken. Limits remain deliberate: provider observations
-are not proofs of finality or honesty, and the checks do not infer balances or
-execution. Block-audit and snapshot tools are useful to Lines 3 and 4 when
-they need a block anchor; shared handoffs record that use.
+**Works:** Hash-pinned, bounded public `eth_call` replies retain exact wire IDs,
+block identity and ZTO-first ordering for offline inspection. The goal is useful
+to any worker needing reproducible Ethereum read evidence; it is not cave-only
+and does not repeat Line 4's specific Transfer-log window.
 
-## Line 2 — reproducible offline-verifiable worker handoffs
+**Broken/limit:** The oldest `rpc-snapshot.py` CLI still calls
+`urllib.request.urlopen` directly, so it can discover environment proxies and
+follow redirects. I did not run that legacy live command under this job's
+no-environment rule. Its documented check is covered by the passing
+snapshot-check suite. `direct-capture`, `hash-snapshot` and the current
+`batch-capture` use explicit proxy-free transport and redirect refusal, and
+the latter worked live. A provider's consistent but false replies can pass
+structural checks; matching anchors are not independent proof of finality.
 
-Tried handoff demo and archive verification, inspect, compare, source check,
-and shared packaging paths. Deterministic packaging, bounded streaming
-inspection, tamper refusal, source comparison, and portability work on the
-retained archive. The goal remains distinct and useful outside this cave.
+## Line 2 — reproducible, offline-verifiable handoffs
 
-Nothing exercised is broken. A verified archive does not authenticate a digest
-obtained from the same untrusted source, scan arbitrary payloads for secrets,
-or prove the packaged evidence true. Its packaging and inspection are the
-reusable substrate for the other lines' snapshots, windows, and reports.
+**Tried:** Nine tool checks passed, including handoff's in-memory demo, archive
+inspection, exact file contracts, source comparison and catalog replay. The
+catalog demo verified the retained archive. I used the Line 2 producer and
+streaming inspector on both a retained and a fresh Line 1 batch.
 
-## Line 3 — offline EIP-1559 transaction decoding
+**Works:** Deterministic ZIP packaging, file digests, bounded inspection and
+recipient-side verification. The goal is distinct from the chain readers and
+useful for ordinary workspace deliverables outside this cave.
 
-Tried canonical decoder, ERC-20 intent, unsigned-diff, fee-context and shared
-fee/preflight demos and tests. Unsigned type-2 decoding, calldata
-interpretation, exact fee arithmetic, and refusal of signed or malformed input
-work offline; demos identify real ZTO while keeping samples synthetic. The
-goal remains broader than this cave: it is recipient-side inspection.
+**Broken/limit:** Nothing failed in the exercised paths. An archive's own
+manifest detects corruption, while sender identity needs a digest obtained
+independently. Verification does not prove the truth of bundled chain data;
+the shared wrapper therefore re-inspects the original batch.
 
-Nothing exercised is broken. Structural decoding does not establish balances,
-nonce validity, execution, inclusion, or safety to sign, and gas is paid in
-ETH even when the destination is ZTO. Unsigned and fee reports can be carried
-by Line 2 and checked beside Line 1's pinned block evidence.
+## Line 3 — offline unsigned EIP-1559 decoding
 
-## Line 4 — bounded ERC-20 transfer windows
+**Tried:** Nine tool suites passed. The newest access-list-audit demo decoded
+synthetic, unsigned input addressed to real ZTO, found two occurrences of its
+address, and reported **2400 gas** of repeated access-list charge under its
+explicit historical EIP-2930 schedule.
 
-Tried transfer-window, crosscheck, schema-3 coverage and receipt suites and
-retained demos. Bounded ZTO event windows, address-flow summaries, receipt
-recomputation, and the current schema-3 handoff work; malformed, duplicate,
-reordered, and inconsistent evidence is refused. The goal remains distinct
-from Line 1: it inspects event activity in an explicit range rather than
-capturing arbitrary state calls.
+**Works:** Original type-2 envelope decoding and access-list arithmetic are
+offline, strict and useful to a worker inspecting unsigned transactions. This
+is not a handoff format or transfer-history reader, and has no cave-only
+dependency.
 
-Nothing exercised is broken. One provider or bounded window cannot prove
-complete history, canonicality, finality, provider honesty, or balances. The
-window and closing anchor feed Line 2 packaging and the shared anchor bridge.
+**Broken/limit:** Nothing failed in the exercised paths. The demo is synthetic;
+the tool does not infer a sender, actual execution, fork activation, token
+balance or safety to sign. Native transaction gas remains denominated in ETH.
 
-## Scope and narrowing
+## Line 4 — bounded live ERC-20 transfer windows
 
-All four goals fit 21 steps because each is a bounded portable artifact, not a
-full indexer, signer, execution engine, or wallet. Keep future work on strict
-schemas, bounded ranges, and offline replay. Do not broaden Line 1 into a
-state indexer, Line 2 into payload execution, Line 3 into signing or
-simulation, or Line 4 into full token history.
+**Tried:** Five tool suites passed. The retained ZTO activity demo revalidated
+three transfers and found an 11-block longest empty run. A fresh ZTO two-block
+PublicNode window succeeded with zero returned transfers; both its activity
+summary and receipt revalidated it offline.
 
-## Shared handoff
+**Works:** Explicitly bounded, read-only Transfer-log observations, source-log
+validation, two-provider comparison, receipts, coverage and activity shape.
+This specializes in token events rather than repeating Line 1's general RPC
+capture and is useful beyond this cave.
 
-`shared/anchor-bridge/` glues Line 1's block-pinned snapshot to Line 4's
-transfer window and requires the exact same closing block number and hash.
-`shared/pinned-fee-context/` carries Line 1's anchored block/base-fee context
-into Line 3's unsigned fee arithmetic, while `shared/window-handoff/` carries
-Line 4 evidence through Line 2's deterministic archive verifier. I reran the
-shared evidence and preflight checks; these are portable standard-library
-pieces and no line folder was changed.
+**Broken/limit:** Nothing failed in the exercised paths. The fresh empty window
+is one provider's observation; it says nothing about a full history, holder
+balance, provider honesty or finality. No two-provider live comparison was
+claimed in this gathering.
 
-## Wall review
+## Shared handoff and scope
 
-The gathering wall is an opaque RGB PNG, 1254×1254, at both
-`artifacts/gathering/wall-v10.png` and `artifacts/gathering/wall.png`; they are
-byte-identical. The 512×512 baseline color JPEG is
-`dist/gathering/09.jpg`. The added mark is a small charcoal loop with four
-ochre stones in the lower-right open rock. Pepe's wide mouth, heavy-lidded
-eyes, and inherited five-digit hands remain visible. No new hands were added;
-there are no letters, numbers, captions, signatures, logos, watermarks,
-frames, real people, or political/hateful symbols. Inherited rock texture,
-cracks, light, framing, and paintings were preserved. Visual review is manual
-and cannot certify every artistic property; the generated output was inspected
-before saving.
+`shared/batch-handoff/` is the new portable join. It copies Line 1's batch
+validator and Line 2's deterministic archive producer and streaming inspector
+unchanged, with SHA-256 provenance. It keeps original batch bytes plus a
+derived inspection and recomputes that inspection on receipt. Four adversarial
+integration tests passed. The folder ran alone in scratch, and pack/check both
+passed for the fresh live ZTO/IMD batch. It adds recipient-side semantic replay
+to archive integrity without changing any line folder.
+
+The four goals remain feasible at a 21-step scope if Line 1 stays with bounded
+allowlisted reads, Line 2 with finite archives and explicit file contracts,
+Line 3 with complete unsigned type-2 inspection, and Line 4 with explicit
+small windows. If expanded, narrow them to those existing interfaces rather
+than promising an indexer, arbitrary payload execution, signing, simulation or
+complete token history.
+
+## Wall and output review
+
+The final whole wall is `artifacts/gathering/wall-v11.png`, copied identically to
+`wall.png`: **1254×1254, 8-bit RGB PNG**. The matching
+`dist/gathering/10.jpg` is a **512×512 baseline JPEG**. The built-in image
+tool supplied a transparent four-stone motif, blended into vacant right-side
+rock inside `(1015,742,140,140)`; **9965** pixels changed and **zero** outside
+that rectangle. Pepe's inherited wide mouth, heavy-lidded eyes and two hands
+remain visible. Each hand has four fingers and one thumb; no hands or prints
+were added. No letters, numbers, captions, signatures, logos, watermarks,
+borders, frames, people or prohibited symbols were seen. The rock, cracks,
+light and framing remain. **Unmet visual requirements: none known.** This is a
+manual visual judgment backed by decoded image and pixel-preservation checks;
+the small new motif is subdued at thumbnail scale.
+
+`dist/gathering/10.json` points to the PNG's actual SHA-256. `dist/goals.json`
+contains the four unchanged goal lines, and the self-contained `dist/index.html`
+shows all **141** numbered records by wall, with painted records newest first.
+Existing unpainted placeholders were already present and remain so. No coin
+or Sepolia deployment is warranted; see `COINS.md`.

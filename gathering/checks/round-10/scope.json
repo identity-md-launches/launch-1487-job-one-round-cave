@@ -1,0 +1,22 @@
+{
+  "line_folders_unchanged": true,
+  "out_of_scope_changes": [],
+  "artifact_outputs": [
+    "artifacts/gathering/wall-v11.png",
+    "artifacts/gathering/wall.png"
+  ],
+  "nonartifact_files_under_100kb": true,
+  "status": [
+    " M dist/gathering/10.json",
+    " M dist/index.html",
+    " M gathering/COINS.md",
+    " M gathering/README.md",
+    " M gathering/REPORT.md",
+    " M shared/README.md",
+    "?? dist/gathering/10.jpg",
+    "?? gathering/IMAGE-PROMPT-10.md",
+    "?? gathering/checks/round-10/",
+    "?? gathering/compose_wall10.py",
+    "?? shared/batch-handoff/"
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "file": "live-batch-pack.json",
+    "format": "ethereum-batch-handoff/1",
+    "kind": null,
+    "verified": true,
+    "block_number": "26179891",
+    "transfer_count": null,
+    "archive_sha256": "a9075adc78071791fa33cdb40c011ff6b8adb956f3f11dcbe1211a8b857e6e61"
+  },
+  {
+    "file": "live-batch-check.json",
+    "format": "ethereum-batch-handoff/1",
+    "kind": null,
+    "verified": true,
+    "block_number": "26179891",
+    "transfer_count": null,
+    "archive_sha256": "a9075adc78071791fa33cdb40c011ff6b8adb956f3f11dcbe1211a8b857e6e61"
+  },
+  {
+    "file": "live-activity.json",
+    "format": null,
+    "kind": "erc20-transfer-window-activity",
+    "verified": null,
+    "block_number": null,
+    "transfer_count": 0,
+    "archive_sha256": null
+  },
+  {
+    "file": "live-receipt.json",
+    "format": null,
+    "kind": "erc20-transfer-window-receipt",
+    "verified": null,
+    "block_number": null,
+    "transfer_count": 0,
+    "archive_sha256": null
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "line-1/tools/batch-capture",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "stdout_tail": "",
+    "stderr_tail": "t_invalid_calls_fail_before_send) ... ok\ntest_missing_response (test_batch_capture.BatchTests.test_missing_response) ... ok\ntest_no_network_for_unsafe_request (test_batch_capture.BatchTests.test_no_network_for_unsafe_request) ... ok\ntest_no_pending_tag (test_batch_capture.BatchTests.test_no_pending_tag) ... ok\ntest_no_sequential_fallback_on_failed_batch (test_batch_capture.BatchTests.test_no_sequential_fallback_on_failed_batch) ... ok\ntest_out_of_order_wire_ids (test_batch_capture.BatchTests.test_out_of_order_wire_ids) ... ok\ntest_real_chain_demo (test_batch_capture.BatchTests.test_real_chain_demo) ... ok\ntest_result_plus_error (test_batch_capture.BatchTests.test_result_plus_error) ... ok\ntest_short_known_abi_word (test_batch_capture.BatchTests.test_short_known_abi_word) ... ok\ntest_strict_json (test_batch_capture.BatchTests.test_strict_json) ... ok\ntest_string_id (test_batch_capture.BatchTests.test_string_id) ... ok\ntest_unknown_call_field (test_batch_capture.BatchTests.test_unknown_call_field) ... ok\ntest_unknown_id (test_batch_capture.BatchTests.test_unknown_id) ... ok\ntest_wrong_chain (test_batch_capture.BatchTests.test_wrong_chain) ... ok\ntest_wrong_explicit_block (test_batch_capture.BatchTests.test_wrong_explicit_block) ... ok\ntest_wrong_hash (test_batch_capture.BatchTests.test_wrong_hash) ... ok\ntest_wrong_version (test_batch_capture.BatchTests.test_wrong_version) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.007s\n\nOK\n"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "line-3/tools/access-list-audit",
+      "-v"
+    ],
+    "exit": 0,
+    "stdout_tail": "",
+    "stderr_tail": "ess_audit.AuditTests.test_byte_identity_case_not_text_identity) ... ok\ntest_cli_status_stdin_and_no_partial_output (test_access_audit.AuditTests.test_cli_status_stdin_and_no_partial_output) ... ok\ntest_creation_does_not_change_list_charges (test_access_audit.AuditTests.test_creation_does_not_change_list_charges) ... ok\ntest_demo_matches_formats_and_has_real_destination (test_access_audit.AuditTests.test_demo_matches_formats_and_has_real_destination) ... ok\ntest_duplicate_addresses_with_distinct_keys (test_access_audit.AuditTests.test_duplicate_addresses_with_distinct_keys) ... ok\ntest_empty (test_access_audit.AuditTests.test_empty) ... ok\ntest_key_is_scoped_to_address (test_access_audit.AuditTests.test_key_is_scoped_to_address) ... ok\ntest_original_order_retained_and_json_rlp_equivalent (test_access_audit.AuditTests.test_original_order_retained_and_json_rlp_equivalent) ... ok\ntest_oversize_rlp_integer (test_access_audit.AuditTests.test_oversize_rlp_integer) ... ok\ntest_refuses_ambiguous_malformed_and_oversize (test_access_audit.AuditTests.test_refuses_ambiguous_malformed_and_oversize) ... ok\ntest_refuses_signed_json_and_rlp (test_access_audit.AuditTests.test_refuses_signed_json_and_rlp) ... ok\ntest_seeded_cost_partition (test_access_audit.AuditTests.test_seeded_cost_partition) ... ok\ntest_within_entry_repetition (test_access_audit.AuditTests.test_within_entry_repetition) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.255s\n\nOK\n"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "line-1/tools/snapshot-check/test_checks.py"
+    ],
+    "exit": 0,
+    "stdout_tail": "",
+    "stderr_tail": "test_forbidden_methods_never_open_network (__main__.Checks.test_forbidden_methods_never_open_network) ... ok\ntest_malformed_response (__main__.Checks.test_malformed_response) ... ok\ntest_null_response_cli_controlled (__main__.Checks.test_null_response_cli_controlled) ... ok\ntest_offline_summary (__main__.Checks.test_offline_summary) ... ok\ntest_parameter_validation (__main__.Checks.test_parameter_validation) ... ok\ntest_response_limit (__main__.Checks.test_response_limit) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.009s\n\nOK\n"
+  }
+]

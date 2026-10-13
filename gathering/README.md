@@ -1,4 +1,22 @@
-# Gathering 08 — The Anchored Ember
+# Gathering 10 — Four Witnesses at the Ember
+
+The current round checked all 32 line tool commands and all nine shared test
+suites. Fresh read-only ZTO/IMD and ZTO transfer-window observations passed
+their receiving tools. `shared/batch-handoff/` now gives another worker a
+portable, reproducible archive of a hash-pinned call batch and rechecks the
+original JSON-RPC evidence on receipt:
+
+```sh
+python3 -B shared/batch-handoff/batch_handoff.py demo
+```
+
+Details and limits are in `REPORT.md`, `COINS.md`, and
+`IMAGE-PROMPT-10.md`. The 1254×1254 whole-wall PNG is
+`artifacts/gathering/wall-v11.png`, with an identical `wall.png` and a 512×512
+JPEG at `dist/gathering/10.jpg`; record 10 uses its actual SHA-256. The
+gallery includes all 141 numbered records. No line folder was changed.
+
+## Earlier gathering 08 — The Anchored Ember
 
 Tested all four lines, retained fresh real ZTO/IMD observations, and added an
 offline shared join between recorded block base fees and unsigned fee inspection.

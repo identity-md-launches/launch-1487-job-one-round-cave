@@ -1,0 +1,35 @@
+{
+  "format": "batch-handoff-provenance/1",
+  "modules": [
+    {
+      "source": "line-1/tools/batch-capture/batch_capture.py",
+      "copy": "vendor/batch-capture/batch_capture.py",
+      "sha256": "5bd196891d1fb998de81e0f65c3f74861920625004ebbc5befa9d7142076c519"
+    },
+    {
+      "source": "line-1/tools/hash-snapshot/hash_snapshot.py",
+      "copy": "vendor/hash-snapshot/hash_snapshot.py",
+      "sha256": "d44c3960020386ab0f1080316b16b3551876ec20a01422d9fa2378994b2bdb49"
+    },
+    {
+      "source": "line-1/tools/rpc-snapshot/rpc_snapshot.py",
+      "copy": "vendor/rpc-snapshot/rpc_snapshot.py",
+      "sha256": "4539fe2da1f25e31f2178681075fa882f3dccb6f71b201cffb1f78292c96b9f4"
+    },
+    {
+      "source": "line-2/tools/handoff/handoff.py",
+      "copy": "vendor/handoff/handoff.py",
+      "sha256": "0b3878b76c13a18951601aef2ec48daf8c56fbb195fea953be797a7f1d8df97d"
+    },
+    {
+      "source": "line-2/tools/handoff-inspect/inspect_handoff.py",
+      "copy": "vendor/handoff-inspect/inspect_handoff.py",
+      "sha256": "62cc8e4b31c231eb394bd5f3053c2db29c05fc4fa62d3aeafe76027a52b8103a"
+    },
+    {
+      "source": "line-1/tools/batch-capture/example-mainnet.json",
+      "copy": "examples/zto-imd-batch.json",
+      "sha256": "98117991c2ecdf5a068df5a164e727cd87fc7d8732ba1518a833aaa77006a67d"
+    }
+  ]
+}
