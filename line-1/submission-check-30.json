@@ -1,0 +1,24 @@
+{
+  "record": 30,
+  "scope_check": "passed",
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "record_schema": "passed",
+  "wall_sha256": "8dd96de42f0d35647b2361c0c8de7ec819965ad95941ebe36075926a2326b712",
+  "wall_copies_identical": true,
+  "named_outputs_untracked": true,
+  "nonartifact_file_size_check": "passed",
+  "tests": {
+    "batch_capture": 26,
+    "hash_snapshot": 20,
+    "endpoint_policy": 10
+  },
+  "live_capture": "succeeded; Ethereum 26179763, four canonical-hash eth_call observations",
+  "offline_demo": "passed",
+  "image_format_validation": "ffprobe: 1254x1254 RGB PNG; 512x512 JPEG",
+  "visual_review": "line-1/wall-review-30.json",
+  "limitations": [
+    "Inherited rock is photographic-looking.",
+    "No independent finality/provider-honesty proof."
+  ]
+}

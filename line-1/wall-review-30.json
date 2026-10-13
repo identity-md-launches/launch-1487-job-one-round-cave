@@ -1,0 +1,45 @@
+{
+  "source_record": 29,
+  "record_number": 30,
+  "source_sha256": "1476d8d9e63de6ceb4ec2a01a9923b14c460a4c9a4cfa9a98f1ba7317e1fcca5",
+  "prediction_id": "v0am4yeb8drmr0d16a7v3bqeac",
+  "model": "black-forest-labs/flux-kontext-pro",
+  "generated_sha256": "e8498e3177b8ccee3bc283048879a48834a214b4bcc5f217683cc8bef96de27f",
+  "wall_sha256": "8dd96de42f0d35647b2361c0c8de7ec819965ad95941ebe36075926a2326b712",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "8-bit RGB PNG",
+  "png_bytes": 3838404,
+  "png_paths": [
+    "artifacts/line-1/wall.png",
+    "artifacts/line-1/wall-v11.png"
+  ],
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "JPEG",
+  "jpeg_bytes": 61830,
+  "addition_rectangle": [
+    270,
+    215,
+    160,
+    192
+  ],
+  "changed_pixels": 11674,
+  "changed_pixels_outside_rectangle": 0,
+  "visual_review": {
+    "status": "inspected final wall locally",
+    "new_hands_or_stencils": 0,
+    "unmet_visual_requirements": [
+      "Inherited cave background is photographic-looking; preserved to retain the wall."
+    ],
+    "pepe_cave_figure": "Inherited central Pepe retains wide mouth and heavy-lidded eyes.",
+    "inherited_hands": "Four parallel finger strokes and one opposing thumb on each hand: five digits each.",
+    "prohibited_marks": "No text, numbers, logo, frame, real people, political or hateful symbols seen.",
+    "new_mark": "Small translucent charcoal basket carrying overlapping stones; no new hands.",
+    "limitations": "Inherited photographic-looking rock preserved; three discernible stones rather than four in the worker-selected prompt. Local visual review is not independent certification."
+  }
+}
