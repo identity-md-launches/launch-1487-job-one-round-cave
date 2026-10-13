@@ -137,3 +137,18 @@
   is a 512×512 thumbnail.
 - No dependency was installed. No key, wallet, secret or environment was read;
   no transaction was created, signed, submitted or deployed.
+
+## Round 30
+
+- Kept the line goal and all older records unchanged. Added
+  `tools/transfer-window-activity/`, a standard-library companion that
+  revalidates a saved bounded capture through the inherited strict reader and
+  reports contiguous populated/empty block runs plus the longest empty run.
+  Its offline demo uses retained real ZTO evidence, and tests cover populated
+  and empty windows plus tamper rejection.
+- Recovered record 29's content-addressed wall and verified its 1254×1254
+  PNG dimensions before editing. Used the image-generation skill to create a
+  five-digit ochre/charcoal hand stencil, then composited only that localized
+  mark onto vacant lower-left rock. The final JPEG is a 512×512 thumbnail.
+- No dependency was installed. No key, wallet, secret, environment, signing,
+  transaction submission, or deployment was used.
